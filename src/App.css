@@ -1,0 +1,163 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #1d27e1;
+  --primary-hover: #5412be;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+  }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.busca {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.busca input {
+  padding: 10px;
+  width: 260px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius) 0 0 var(--radius);
+  outline: none;
+  background: var(--card);
+  color: var(--text);
+}
+
+.busca button {
+  padding: 10px 15px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  transition: 0.2s;
+}
+
+.busca button:hover {
+  background: var(--primary-hover);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  position: relative;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  color: white; 
+}
+
+  .overlay h3 {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .overlay p {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+
+  .detalhes {
+    margin-top: 20px;
+  }
+
+  .voltar {
+    margin-bottom: 15px;
+    padding: 8px 12px;
+    border: none;
+    background: #e5e7eb;
+    color: var(--text);
+    cursor: pointer;
+    border-radius: var(--radius);
+    transition: 0.2s;
+  }
+
+  .voltar:hover {
+    background: #d1d5db;
+  }
+
+  .detalhesCard {
+    display: flex;
+    gap: 20px;
+    background: var(--card);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+  .detalhesCard img {
+    width: 220px;
+    border-radius: var(--radius);
+  }
+
+  .infoDetalhes {
+    flex: 1;
+  }
+
+  .infoDetalhes h2 {
+    margin-top: 0;
+  }
+
+  .descricao {
+    margin-top: 10px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* STATUS */
+  .status {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--muted);
+  }
+
+  .erro {
+    text-align: center;
+    color: #dc2626;
+    font-weight: bold;
+  }
